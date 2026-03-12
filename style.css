@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.student {
+  border-radius: 1em;
+  padding: 3em 3em;
+  box-shadow: 2em 3em 4em 0.5em hsl(0, 0%, 60%);
+}
+
+.student--one {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(260, 100%, 95%);
+  grid-area: one;
+}
+
+.student--two {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+  grid-area: two;
+}
+
+.student--three {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(224, 10%, 45%);
+  grid-area: three;
+}
+
+.student--four {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+  grid-area: four;
+}
+
+.student--five {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(224, 10%, 45%);
+  grid-area: five;
+}
+
+.container {
+  padding: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "one one two five"
+    "three four four five"
+    "six six six six";
+
+  gap: 3em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.student__img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 0.25em solid;
+}
+
+.student__name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.student__status {
+  font-size: 0.85rem;
+  padding-top: 0.1em;
+}
+
+.description {
+  padding: 1em 0;
+}
+
+.content {
+  font-size: 0, 9rem;
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+  }
+}
